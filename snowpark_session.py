@@ -1,11 +1,15 @@
 from typing import Optional
 
 import mlflow
-from azure.identity import (AzureCliCredential, ChainedTokenCredential,
-                            ClientSecretCredential, DefaultAzureCredential,
-                            InteractiveBrowserCredential,
-                            ManagedIdentityCredential,
-                            VisualStudioCodeCredential)
+from azure.identity import (
+    AzureCliCredential,
+    ChainedTokenCredential,
+    ClientSecretCredential,
+    DefaultAzureCredential,
+    InteractiveBrowserCredential,
+    ManagedIdentityCredential,
+    VisualStudioCodeCredential,
+)
 from pydantic import BaseSettings
 
 
