@@ -1,7 +1,6 @@
 from typing import Optional
 
 import mlflow
-import pandas as pd
 from azure.identity import (AzureCliCredential, ChainedTokenCredential,
                             ClientSecretCredential, DefaultAzureCredential,
                             InteractiveBrowserCredential,
