@@ -1,20 +1,13 @@
-import os
-import re
 from typing import Optional
 
 import mlflow
 import pandas as pd
-from azure.identity import (
-    AzureCliCredential,
-    ChainedTokenCredential,
-    ClientSecretCredential,
-    DefaultAzureCredential,
-    InteractiveBrowserCredential,
-    ManagedIdentityCredential,
-    VisualStudioCodeCredential,
-)
-from databricks import sql as adb_sql
-from pydantic import BaseSettings, validator
+from azure.identity import (AzureCliCredential, ChainedTokenCredential,
+                            ClientSecretCredential, DefaultAzureCredential,
+                            InteractiveBrowserCredential,
+                            ManagedIdentityCredential,
+                            VisualStudioCodeCredential)
+from pydantic import BaseSettings
 
 
 def main():
