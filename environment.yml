@@ -1,4 +1,4 @@
-name: databricks_session
+name: snowpark_session
 dependencies:
   - numpy
   - pandas

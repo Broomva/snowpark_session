@@ -1,6 +1,4 @@
-def main():
-    print("Databricks Session utility is installed")
-
+from snowpark_session import main
 
 if __name__ == "__main__":
     main()

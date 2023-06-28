@@ -7,9 +7,9 @@ install: local_build_and_deploy
 reinstall : create_env && install
 
 local_build_and_deploy: 
-	pip uninstall databricks_session -y \
+	pip uninstall snowpark_session -y \
 	&& python setup.py install \
-	&& databricks_session
+	&& snowpark_session
 
 package_build:
 	python -m build
@@ -18,7 +18,7 @@ package_list:
 	unzip -l dist/*.whl  
 
 create_env:
-	conda deactivate -n databricks_session \
-	&& conda env remove -n databricks_session -y \
-	&& conda create -n databricks_session python=3.10 -y \
-	&& conda activate databricks_session
+	conda deactivate -n snowpark_session \
+	&& conda env remove -n snowpark_session -y \
+	&& conda create -n snowpark_session python=3.8 -y \
+	&& conda activate snowpark_session

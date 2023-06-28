@@ -8,7 +8,7 @@ from setuptools import find_namespace_packages, find_packages
 
 if sys.version_info < (3, 8):
     find_namespace_packages()
-    print("Error: databricks_session does not support this version of Python.")
+    print("Error: snowpark_session does not support this version of Python.")
     print("Please upgrade to Python 3.8 or higher.")
     sys.exit(1)
 
@@ -22,16 +22,16 @@ def prepare_data_files(directory, extensions):
 
 data_files_structure = [
     (
-        "databricks_session",
+        "snowpark_session",
         prepare_data_files(
-            "databricks_session",
+            "snowpark_session",
             ["csv", "sql", "txt", "md", "html", "css", "json", "yaml", "faiss", "pkl"],
         ),
     ),
 ]
 
 # Package metadata.
-name = "databricks_session"
+name = "snowpark_session"
 description = (
     "A simple util to get a spark and mlflow session objects from an .env file"
 )
@@ -76,7 +76,7 @@ setuptools.setup(
         "Programming Language :: Python :: 3",
         "Programming Language :: Python :: 3.8",
         "Programming Language :: Python :: 3.9",
-        "Programming Language :: Python :: 3.10",
+        "Programming Language :: Python :: 3.8",
         "Programming Language :: Python :: 3.11",
         "Topic :: Software Development :: Libraries :: Python Modules",
     ],
@@ -88,9 +88,9 @@ setuptools.setup(
     tests_require=["pytest"],
     test_suite="tests",
     zip_safe=False,
-    url="https://github.com/Broomva/databricks_session",
+    url="https://github.com/Broomva/snowpark_session",
     package_data={
-        "databricks_session": [
+        "snowpark_session": [
             "*.json",
             "*.yaml",
             "*.sql",
@@ -107,7 +107,7 @@ setuptools.setup(
     py_modules=["main"],
     entry_points={
         "console_scripts": [
-            "databricks_session=main:main",
+            "snowpark_session=main:main",
         ],
     },
 )
