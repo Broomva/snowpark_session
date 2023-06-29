@@ -77,11 +77,9 @@ class AzureMLFlowSession(MLFlowSession):
     azureml_workspace_name: Optional[str] = None
     azureml_credential: Optional[object] = None
 
-    def init_credential(
-        self,
-        credential_type: str = "DefaultAzureCredential",
-        credential_args: dict = {},
-    ):
+    def init_credential(self, credential_type: str = "DefaultAzureCredential", credential_args: dict = None):
+        if credential_args is None:
+            credential_args = {}
         # Map string names to azure.identity classes
         credential_types = {
             "DefaultAzureCredential": DefaultAzureCredential,
@@ -126,11 +124,9 @@ class AzureMLFlowSession(MLFlowSession):
         mlflow.set_tracking_uri(mlflow_tracking_uri)
         mlflow.set_experiment(self.azureml_experiment_name)
 
-    def get_session(
-        self,
-        credential_type: str = "DefaultAzureCredential",
-        credential_args: dict = {},
-    ):
+    def get_session(self, credential_type: str = "DefaultAzureCredential", credential_args: dict = None):
+        if credential_args is None:
+            credential_args = {}
         self.init_credential(credential_type, credential_args)
         self.set_experiment_id()
         ml_client = self.get_mlclient()
