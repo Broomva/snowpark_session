@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.1](https://github.com/Broomva/snowpark_session/compare/v0.1.0...v0.1.1) (2023-07-06)
+
+
+### Bug Fixes
+
+* corrected imports and spark session creation ([4a61673](https://github.com/Broomva/snowpark_session/commit/4a6167340c5ff751c08400b08bc67e3e8701112b))
+
 ## 0.1.0 (2023-06-29)
 
 
