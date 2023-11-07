@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.1.2](https://github.com/Broomva/snowpark_session/compare/v0.1.1...v0.1.2) (2023-11-07)
+
+
+### Bug Fixes
+
+* added entrypoint in pyproject.toml ([a04aa7b](https://github.com/Broomva/snowpark_session/commit/a04aa7bcfa6391e6d1e73861cba7fea0e687a6da))
+* corrected readme examples ([468fcde](https://github.com/Broomva/snowpark_session/commit/468fcded87aed74508dd472d31842bf637c1901e))
+* removed unneded files and updated example.py ([0b7c4f5](https://github.com/Broomva/snowpark_session/commit/0b7c4f5724a60d9b7581d30068e231fa1170dbfb))
+
 ## [0.1.1](https://github.com/Broomva/snowpark_session/compare/v0.1.0...v0.1.1) (2023-07-06)
 
 
