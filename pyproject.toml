@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "snowpark-session"
-version = "0.1.1"
+version = "0.1.2"
 description = ""
 authors = ["Carlos D. Escobar-Valbuena <carlosdavidescobar@gmail.com>"]
 readme = "README.md"
