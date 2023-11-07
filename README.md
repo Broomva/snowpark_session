@@ -57,21 +57,28 @@ touch .env
 It should have a schema like this:
 
 ```toml
-databricks_experiment_name=''
-databricks_experiment_id=''
-databricks_host=''
-databricks_token=''
-databricks_username=''
-databricks_password=''
-databricks_cluster_id=''
+snowflake_account=''
+snowflake_user=''
+snowflake_password=''
+snowflake_user_role=''
+snowflake_warehouse=''
+snowflake_database=''
+snowflake_schema=''
+
+# Optional
+azureml_experiment_name=''
+azureml_experiment_id=''
+azureml_subscription_id=''
+azureml_resource_group=''
+azureml_workspace_name=''
 ```
 
 ```python
-import snowpark_session 
+import snowpark_session as ss
 
 # Create a Spark session
-spark = DatabricksSparkSession().get_session()
+spark = ss.SnowparkSession().get_session()
 
 # Connect to MLFLow Artifact Server
-mlflow_session = DatabricksMLFlowSession().get_session()
+mlflow_session = ss.AzureMLFlowSession().get_session()
 ```
