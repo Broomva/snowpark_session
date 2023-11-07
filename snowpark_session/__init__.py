@@ -1,15 +1,11 @@
 from typing import Optional
 
 import mlflow
-from azure.identity import (
-    AzureCliCredential,
-    ChainedTokenCredential,
-    ClientSecretCredential,
-    DefaultAzureCredential,
-    InteractiveBrowserCredential,
-    ManagedIdentityCredential,
-    VisualStudioCodeCredential,
-)
+from azure.identity import (AzureCliCredential, ChainedTokenCredential,
+                            ClientSecretCredential, DefaultAzureCredential,
+                            InteractiveBrowserCredential,
+                            ManagedIdentityCredential,
+                            VisualStudioCodeCredential)
 from pydantic import BaseSettings
 
 
@@ -65,7 +61,7 @@ class MLFlowSession(BaseSettings):
 
 
 class AzureMLFlowSession(MLFlowSession):
-    azureml_experiment_name: str = "tse_prophet_hyperopt"
+    azureml_experiment_name: str = "mlflow_experiments"
     azureml_experiment_id: Optional[str] = None
     azureml_subscription_id: Optional[str] = None
     azureml_resource_group: Optional[str] = None
